@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://challenges.cloudflare.com">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nerdverse - Waitlist</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer
+></script>
+
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
@@ -29,6 +36,8 @@
 >
     <form id="waitlist" class="flex flex-col md:flex-row justify-center max-w-xl mx-auto gap-4">
       <input type="email" name="email" placeholder="Enter your email" class="px-4 py-3 rounded-md text-gray-900 flex-1 focus:outline-none" required>
+      <div class="cf-turnstile" data-sitekey="<0x4AAAAAACKgqazDhVuTWGZI>"></div>
+
       <button type="submit" class="bg-indigo-400 text-gray-900 px-6 py-3 rounded-md font-bold hover:bg-indigo-500 transition">Join Waitlist</button>
     </form>
     <p class="text-gray-500 mt-4 text-sm">Be the first to get early access!</p>
